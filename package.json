@@ -1,0 +1,16 @@
+{
+  "name": "quickstack",
+  "version": "1.0.0",
+  "description": "A fullstack solution for small business, hobbiest and start ups",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "QuickStack",
+    "QucikApp",
+    "QuickStart"
+  ],
+  "author": "Keanu Ashwell",
+  "license": "MIT"
+}
