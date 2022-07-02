@@ -19,19 +19,19 @@ jobs:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
-      - name: setup checkout
+      - name: checkout
         uses: actions/checkout@v3
 
       - name: install global dependencies
         run: npm install -g lerna @angular/cli &> /dev/null
 
-      - name: npm install
+      - name: install dependencies
         run: |
           lerna exec npm install --scope=quickstack -- --force
           lerna exec npm install --scope=client -- --force
 
       - name: test
-        run: lerna run test --scope=client -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+        run: lerna run test:ci --scope=client
   build:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
@@ -39,12 +39,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - name: install globals
+      - name: install global dependencies
         run: npm install -g lerna @angular/cli &> /dev/null
 
-      - name: npm install
+      - name: install dependencies
         run: |
           lerna exec npm install --scope=quickstack -- --force
           lerna exec npm install --scope=client -- --force
+
       - name: build
         run: lerna run build --scope=client
