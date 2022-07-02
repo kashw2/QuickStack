@@ -8,7 +8,8 @@
     "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --no-progress",
-    "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI"
+    "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "release": "standard-version"
   },
   "dependencies": {
     "@angular/animations": "^14.0.0",
