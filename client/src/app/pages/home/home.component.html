@@ -1,0 +1,120 @@
+<div class="d-flex flex-column h-100">
+  <app-header></app-header>
+  <div class="col">
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/images/carousel-item-1.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="fw-bold">QuickStack</h1>
+            <p>Quick to setup.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/carousel-item-2.jpg" class="d-block w-100" alt="">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="fw-bold">QuickStack</h1>
+            <p>Easy to manage.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <i class="bi bi-arrow-down d-flex justify-content-center mt-1 fs-2"
+       (click)="viewportScroller.scrollToAnchor('who-we-are')"></i>
+    <div id="who-we-are" class="container-fluid my-4">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <h1 class="fs-2 fw-bold text-center">Who we are</h1>
+          <p class="lh-baseline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, massa eget
+            bibendum vulputate, nisi nunc euismod leo, sed consectetur odio lorem pellentesque tortor. Aenean sed risus
+            eu diam hendrerit faucibus. Pellentesque at leo ut enim tristique venenatis. Donec id dui nisi. Nullam
+            fermentum pulvinar libero in sagittis. In vulputate, enim non lobortis ultrices, tellus tellus rutrum quam,
+            id tristique risus enim non tortor. Mauris vestibulum finibus nisl ut condimentum.</p>
+          <p class="lh-baseline">Integer varius tortor varius mauris convallis condimentum. Pellentesque in dictum
+            mauris. Sed malesuada faucibus ipsum eget efficitur. Nulla tempus vulputate lectus, at hendrerit nibh
+            molestie id. Praesent eleifend, risus at condimentum vestibulum, libero nisl sodales metus, id fermentum
+            nisi justo a felis. Nulla auctor felis neque, quis euismod lectus efficitur dictum. Pellentesque at turpis
+            risus. Sed rhoncus nunc sem, vel iaculis tellus mollis sit amet. Suspendisse et sagittis elit.</p>
+          <p class="lh-baseline">Praesent bibendum at ipsum nec feugiat. Nunc in orci scelerisque, egestas mi eget,
+            malesuada est. Quisque nec tincidunt dui. Nunc sit amet dictum mi. Phasellus quis eleifend purus. Fusce
+            congue nisi ac lacinia scelerisque. Proin malesuada sem nisi, vitae mollis massa feugiat eu. Nullam nunc
+            purus, egestas a dignissim quis, eleifend sed enim. Ut non nibh et nibh semper luctus et ac mi.</p>
+          <p class="lh-baseline">Aliquam ultricies convallis risus sed mattis. Duis varius ligula dolor, et suscipit
+            quam tincidunt eu. Morbi faucibus, ante sit amet malesuada faucibus, lacus lectus vehicula nisi, a consequat
+            ex neque at mi. Vestibulum vitae velit sed velit pretium pellentesque tempor molestie nulla. Cras pulvinar
+            metus vitae porttitor viverra. Nam auctor dapibus sem vel elementum. Nunc fermentum ante non congue
+            vestibulum. Pellentesque in massa arcu. Donec a finibus neque. Vivamus vitae varius elit. Phasellus
+            tristique, quam sit amet rhoncus fermentum, quam dolor euismod ligula, vel molestie arcu ex rhoncus libero.
+            In vulputate in velit non tincidunt. Fusce porttitor nisi ac accumsan rutrum. Nunc maximus iaculis velit,
+            quis venenatis massa tincidunt et. In massa urna, semper ac luctus at, sagittis ut tortor.</p>
+          <p class="lh-baseline">Phasellus elementum viverra eleifend. Sed placerat rutrum mauris at malesuada. Donec
+            sagittis viverra arcu eget mollis. Nulla consequat varius cursus. Nam id sem eleifend, vestibulum mi sit
+            amet, porttitor libero. Praesent eu justo et turpis vestibulum faucibus in in mi. Aliquam mollis posuere
+            pulvinar. Aenean efficitur purus in nibh dignissim, id commodo purus tempus. Sed turpis quam, finibus ut sem
+            quis, vestibulum iaculis orci. Quisque facilisis quam ac velit pharetra, sit amet fermentum odio consequat.
+            Nam ornare feugiat est vel cursus. Morbi laoreet mauris a massa gravida, nec facilisis urna hendrerit.
+            Integer quis turpis ac enim vehicula auctor. Ut quis mattis dolor. Nulla dictum enim quam, eget ultricies
+            purus gravida eu.</p>
+          <p class="lh-baseline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, massa eget
+            bibendum vulputate, nisi nunc euismod leo, sed consectetur odio lorem pellentesque tortor. Aenean sed risus
+            eu diam hendrerit faucibus. Pellentesque at leo ut enim tristique venenatis. Donec id dui nisi. Nullam
+            fermentum pulvinar libero in sagittis. In vulputate, enim non lobortis ultrices, tellus tellus rutrum quam,
+            id tristique risus enim non tortor. Mauris vestibulum finibus nisl ut condimentum.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-4 mt-4">
+          <h1 class="fs-2 fw-bold text-center">What we do</h1>
+          <p class="lh-baseline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, massa eget
+            bibendum vulputate, nisi nunc euismod leo, sed consectetur odio lorem pellentesque tortor. Aenean sed risus
+            eu diam hendrerit faucibus. Pellentesque at leo ut enim tristique venenatis. Donec id dui nisi. Nullam
+            fermentum pulvinar libero in sagittis. In vulputate, enim non lobortis ultrices, tellus tellus rutrum quam,
+            id tristique risus enim non tortor. Mauris vestibulum finibus nisl ut condimentum.</p>
+          <p class="lh-baseline">Integer varius tortor varius mauris convallis condimentum. Pellentesque in dictum
+            mauris. Sed malesuada faucibus ipsum eget efficitur. Nulla tempus vulputate lectus, at hendrerit nibh
+            molestie id. Praesent eleifend, risus at condimentum vestibulum, libero nisl sodales metus, id fermentum
+            nisi justo a felis. Nulla auctor felis neque, quis euismod lectus efficitur dictum. Pellentesque at turpis
+            risus. Sed rhoncus nunc sem, vel iaculis tellus mollis sit amet. Suspendisse et sagittis elit.</p>
+          <p class="lh-baseline">Praesent bibendum at ipsum nec feugiat. Nunc in orci scelerisque, egestas mi eget,
+            malesuada est. Quisque nec tincidunt dui. Nunc sit amet dictum mi. Phasellus quis eleifend purus. Fusce
+            congue nisi ac lacinia scelerisque. Proin malesuada sem nisi, vitae mollis massa feugiat eu. Nullam nunc
+            purus, egestas a dignissim quis, eleifend sed enim. Ut non nibh et nibh semper luctus et ac mi.</p>
+          <p class="lh-baseline">Aliquam ultricies convallis risus sed mattis. Duis varius ligula dolor, et suscipit
+            quam tincidunt eu. Morbi faucibus, ante sit amet malesuada faucibus, lacus lectus vehicula nisi, a consequat
+            ex neque at mi. Vestibulum vitae velit sed velit pretium pellentesque tempor molestie nulla. Cras pulvinar
+            metus vitae porttitor viverra. Nam auctor dapibus sem vel elementum. Nunc fermentum ante non congue
+            vestibulum. Pellentesque in massa arcu. Donec a finibus neque. Vivamus vitae varius elit. Phasellus
+            tristique, quam sit amet rhoncus fermentum, quam dolor euismod ligula, vel molestie arcu ex rhoncus libero.
+            In vulputate in velit non tincidunt. Fusce porttitor nisi ac accumsan rutrum. Nunc maximus iaculis velit,
+            quis venenatis massa tincidunt et. In massa urna, semper ac luctus at, sagittis ut tortor.</p>
+          <p class="lh-baseline">Phasellus elementum viverra eleifend. Sed placerat rutrum mauris at malesuada. Donec
+            sagittis viverra arcu eget mollis. Nulla consequat varius cursus. Nam id sem eleifend, vestibulum mi sit
+            amet, porttitor libero. Praesent eu justo et turpis vestibulum faucibus in in mi. Aliquam mollis posuere
+            pulvinar. Aenean efficitur purus in nibh dignissim, id commodo purus tempus. Sed turpis quam, finibus ut sem
+            quis, vestibulum iaculis orci. Quisque facilisis quam ac velit pharetra, sit amet fermentum odio consequat.
+            Nam ornare feugiat est vel cursus. Morbi laoreet mauris a massa gravida, nec facilisis urna hendrerit.
+            Integer quis turpis ac enim vehicula auctor. Ut quis mattis dolor. Nulla dictum enim quam, eget ultricies
+            purus gravida eu.</p>
+          <p class="lh-baseline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet, massa eget
+            bibendum vulputate, nisi nunc euismod leo, sed consectetur odio lorem pellentesque tortor. Aenean sed risus
+            eu diam hendrerit faucibus. Pellentesque at leo ut enim tristique venenatis. Donec id dui nisi. Nullam
+            fermentum pulvinar libero in sagittis. In vulputate, enim non lobortis ultrices, tellus tellus rutrum quam,
+            id tristique risus enim non tortor. Mauris vestibulum finibus nisl ut condimentum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
