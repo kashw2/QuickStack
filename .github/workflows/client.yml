@@ -49,3 +49,39 @@ jobs:
 
       - name: build
         run: lerna run build --scope=client
+  deploy:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: install globals dependencies
+        run: npm install -g lerna @angular/cli &> /dev/null
+
+      - name: install dependencies
+        run: |
+          lerna exec npm install --scope=quickstack
+          lerna exec npm install --scope=client
+
+      - name: build
+        run: lerna run build:prod --scope=client
+        working-directory: client
+
+      - name: deploy
+        uses: docker/login-action@v2
+        with:
+          registry: quickstack.azurecr.io
+          username: ${{ secrets.ACR_USERNAME }}
+          password: ${{ secrets.ACR_PASSWORD }}
+      - run: |
+          docker build -t quickstack.azurecr.io/client:${{ github.sha }} -t quickstack.azurecr.io/client:latest -f Dockerfile .
+          docker push quickstack.azurecr.io/client:${{ github.sha }}
+          docker push quickstack.azurecr.io/client:latest
+        working-directory: client
