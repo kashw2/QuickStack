@@ -9,6 +9,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --no-progress",
     "test:ci": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
+    "docker:build": "docker build -t ghcr.io/kashw2/client:$(git rev-parse --verify HEAD) -t ghcr.io/kashw2/client:latest -f Dockerfile .",
+    "docker:run": "docker run -p 4200:80 ghcr.io/kashw2/client:$(git rev-parse --verify HEAD)",
+    "docker:publish": "docker push ghcr.io/kashw2/client:$(git rev-parse --verify HEAD) && docker push ghcr.io/kashw2/client:latest",
     "release": "standard-version"
   },
   "dependencies": {
