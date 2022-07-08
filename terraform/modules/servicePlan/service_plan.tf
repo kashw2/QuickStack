@@ -3,5 +3,5 @@ resource "azurerm_service_plan" "free" {
   name                = "free"
   os_type             = "Linux"
   resource_group_name = var.resource_group_name
-  sku_name            = "FREE"
+  sku_name            = "F1"
 }
