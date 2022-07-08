@@ -5,6 +5,12 @@ terraform {
       version = "3.12.0"
     }
   }
+  backend "azurerm" {
+    storage_account_name = "quickstack"
+    resource_group_name  = "infrastructure"
+    container_name       = "terraform-state-container"
+    key                  = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
