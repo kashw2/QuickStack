@@ -1,7 +1,11 @@
-.idea
 *.iml
-
+**/.terraform
+**/.terraform.lock.hcl
+**/.terraform.tfstate.lock.info
+**/*.tfstate
+**/*.tfstate.backup
 **/package-lock.json
 
+.idea
 **/node_modules
 **/dist
