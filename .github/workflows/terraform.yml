@@ -25,30 +25,49 @@ env:
   TF_VAR_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
+  infracost:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    env:
+      TF_ROOT: ./terraform
+
+    steps:
+      - name: setup infracost
+        uses: infracost/actions/setup@v2
+        with:
+          api-key: ${{ secrets.INFRACOST_API_KEY }}
+
+      - uses: actions/checkout@v3
+
+      - name: generate cost breakdown
+        run: infracost breakdown --path=${TF_ROOT} --format=json --out-file=/tmp/infracost-base.json
+
+      - name: generate cost diff
+        run: infracost diff --path=${TF_ROOT} --format=json --compare-to=/tmp/infracost-base.json --out-file=/tmp/infracost.json
+
+      - name: post comment
+        run: infracost comment github --path=/tmp/infracost.json --repo=$GITHUB_REPOSITORY --github-token=${{github.token}} --pull-request=${{github.event.pull_request.number}} --behavior=update
   plan:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
+
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.0.0
 
-      - name: Terraform fmt
-        id: fmt
+      - name: fmt
         run: terraform fmt -recursive
 
-      - name: Terraform Init
-        id: init
+      - name: init
         run: terraform init
 
-      - name: Terraform Validate
-        id: validate
+      - name: validate
         run: terraform validate
 
-      - name: Terraform Plan
-        id: plan
+      - name: plan
         run: terraform plan -refresh=false
 
   apply:
@@ -57,22 +76,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.0.0
 
-      - name: Terraform fmt
-        id: fmt
+      - name: fmt
         run: terraform fmt -recursive
 
-      - name: Terraform Init
-        id: init
+      - name: init
         run: terraform init
 
-      - name: Terraform Validate
-        id: validate
+      - name: validate
         run: terraform validate
 
-      - name: Terraform Apply
-        id: apply
+      - name: apply
         run: terraform apply -auto-approve -refresh=false
