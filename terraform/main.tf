@@ -22,3 +22,10 @@ module "app_service" {
   registry_password   = var.GITHUB_TOKEN
   depends_on          = [module.bootstrap, module.resource_group, module.service_plan]
 }
+
+module "cosmos" {
+  source              = "./modules/cosmos"
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
+  depends_on          = [module.bootstrap, module.resource_group]
+}
