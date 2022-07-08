@@ -1,6 +1,6 @@
 resource "azurerm_cosmosdb_account" "account" {
   location            = var.location
-  name                = "cosmos"
+  name                = "quickstack"
   offer_type          = "Standard"
   resource_group_name = var.resource_group_name
   kind                = "GlobalDocumentDB"
