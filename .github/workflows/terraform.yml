@@ -17,15 +17,17 @@ defaults:
   run:
     working-directory: ./terraform
 
+env:
+  ARM_CLIENT_ID: ${{ secrets.AZ_CLIENT_ID }}
+  ARM_CLIENT_SECRET: ${{ secrets.AZ_CLIENT_SECRET }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.AZ_SUBSCRIPTION_ID }}
+  ARM_TENANT_ID: ${{ secrets.AZ_TENANT_ID }}
+  TF_VAR_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
 jobs:
   plan:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
-    env:
-      ARM_CLIENT_ID: ${{ secrets.AZ_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.AZ_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.AZ_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.AZ_TENANT_ID }}
 
     steps:
       - uses: actions/checkout@v3
@@ -52,11 +54,6 @@ jobs:
   apply:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    env:
-      ARM_CLIENT_ID: ${{ secrets.AZ_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.AZ_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.AZ_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.AZ_TENANT_ID }}
 
     steps:
       - uses: actions/checkout@v3
