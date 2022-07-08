@@ -5,6 +5,7 @@ resource "azurerm_linux_web_app" "client" {
   service_plan_id     = var.service_plan_id
 
   https_only = true
+  enabled = true
 
   site_config {
 
