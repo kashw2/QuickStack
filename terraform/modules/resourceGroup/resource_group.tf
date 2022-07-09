@@ -1,4 +1,9 @@
-resource "azurerm_resource_group" "group" {
+resource "azurerm_resource_group" "free" {
   location = "East US"
-  name     = "group"
+  name     = "free-group"
+}
+
+resource "azurerm_resource_group" "consumption" {
+  location = "East US"
+  name     = "consumption-group"
 }
