@@ -10,11 +10,3 @@ module "database" {
   resource_group_name = var.resource_group_name
   depends_on          = [module.account]
 }
-
-module "container" {
-  source              = "./container"
-  account_name        = module.account.name
-  database_name       = module.database.name
-  resource_group_name = var.resource_group_name
-  depends_on          = [module.account, module.database]
-}
