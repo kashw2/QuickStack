@@ -9,7 +9,7 @@ resource "azurerm_cosmosdb_account" "account" {
   enable_free_tier = true
 
   consistency_policy {
-    consistency_level = "BoundedStaleness"
+    consistency_level = "Session"
   }
 
   geo_location {
