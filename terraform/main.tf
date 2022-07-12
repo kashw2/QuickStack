@@ -31,10 +31,11 @@ module "app_service" {
 }
 
 module "storage_account" {
-  source              = "./modules/storageAccount"
-  location            = module.resource_group.free_location
-  resource_group_name = module.resource_group.free_name
-  depends_on          = [module.bootstrap, module.resource_group]
+  source                          = "./modules/storageAccount"
+  location                        = module.resource_group.free_location
+  free_resource_group_name        = module.resource_group.free_name
+  consumption_resource_group_name = module.resource_group.consumption_name
+  depends_on                      = [module.bootstrap, module.resource_group]
 }
 
 module "function_app" {
