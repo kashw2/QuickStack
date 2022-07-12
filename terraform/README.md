@@ -10,6 +10,8 @@ Currently, provisioning of all infrastructure is a two-step process.
 1) Create all B2B Infrastructure
 2) Create all B2C Infrastructure
 
+It is currently not possible to setup CICD for the b2c tenant.
+
 ## Requirements
 
 ### Technology
