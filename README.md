@@ -23,7 +23,7 @@ what some other 'QuickApps' or 'QuickStarts' may offer in comparison.
 
 ### Environment Variables
 
-| NAme               | Description                                       | Usage               |
+| Name               | Description                                       | Usage               |
 |--------------------|---------------------------------------------------|---------------------|
 | AZ_CLIENT_ID       | Azure Client Id                                   | Infrastructure      |
 | AZ_CLIENT_SECRET   | Azure Client Secret                               | Infrastructure      |
