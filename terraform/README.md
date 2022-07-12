@@ -2,9 +2,13 @@
 
 This directory holds all Terraform IaC.
 
-QuickStack provides Terraform configuration that facilitates the stand up of infrastructure that is both scalable and on
-budget. Considerations have been made to allow easy upscaling of resources provided in Azure while also providing a
-solid foundation for most early business use cases.
+This directory is split up into two different but important segments. B2C (Business to Consumer / Client) and B2B
+(Business to Business).
+
+Currently, provisioning of all infrastructure is a two-step process.
+
+1) Create all B2B Infrastructure
+2) Create all B2C Infrastructure
 
 ## Requirements
 
