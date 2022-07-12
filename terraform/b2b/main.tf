@@ -7,19 +7,6 @@ module "resource_group" {
   depends_on = [module.bootstrap]
 }
 
-module "active_directory_b2c" {
-  source              = "./modules/activeDirectoryB2C"
-  resource_group_name = module.resource_group.free_name
-  depends_on          = [module.bootstrap, module.resource_group]
-}
-
-// TODO: Due to a provider being added in this module, it cannot depend
-// Provider is in this module as we don't want to have to add another environment variable for the b2c tenant
-module "application" {
-  source        = "./modules/application"
-  b2c_tenant_id = module.active_directory_b2c.tenant_id
-}
-
 module "service_plan" {
   source                          = "./modules/servicePlan"
   location                        = module.resource_group.free_location
