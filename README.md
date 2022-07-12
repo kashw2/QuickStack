@@ -11,6 +11,8 @@ what some other 'QuickApps' or 'QuickStarts' may offer in comparison.
 
 ## Requirements
 
+### Technology
+
 | Name                                   | Description                         | Version |
 |----------------------------------------|-------------------------------------|---------|
 | TypeScript                             | Primary programming language used   | 4.2+    |
@@ -18,3 +20,14 @@ what some other 'QuickApps' or 'QuickStarts' may offer in comparison.
 | [NodeJS](https://nodejs.org/en/)       | JavaScript Runtime                  | 14.0.0+ |
 | [Terraform](https://www.terraform.io/) | Infrastructure resource provisioner | 1.0.0+  |
 | [Docker](https://www.docker.com/)      | Container orchestration tool        | 20.0.0+ |
+
+### Environment Variables
+
+| Name               | Description                                       | Usage               |
+|--------------------|---------------------------------------------------|---------------------|
+| AZ_CLIENT_ID       | Azure Client Id                                   | Infrastructure      |
+| AZ_CLIENT_SECRET   | Azure Client Secret                               | Infrastructure      |
+| AZ_SUBSCRIPTION_ID | The Id of the Subscription running Terraform over | Infrastructure      |
+| AZ_TENANT_ID       | The tenant / directory id in Azure                | Infrastructure      |
+| GH_TOKEN           | GitHub Personal Access Token                      | Infrastructure / CI |
+| INFRACOST_API_KEY  | API Key from Infracosts                           | Infrastructure / CI |

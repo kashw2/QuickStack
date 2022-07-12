@@ -3,5 +3,5 @@ resource "azurerm_storage_account" "backend" {
   account_tier             = "Standard"
   location                 = var.location
   name                     = "backendfn"
-  resource_group_name      = var.resource_group_name
+  resource_group_name      = var.consumption_resource_group_name
 }

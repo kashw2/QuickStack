@@ -1,17 +1,21 @@
 terraform {
   required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "3.13.0"
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = "2.26.1"
     }
   }
   backend "azurerm" {
     storage_account_name = "quickstack"
     resource_group_name  = "infrastructure"
-    container_name       = "terraform-state-container"
-    key                  = "terraform.tfstate"
+    container_name       = "terraform"
+    key                  = "b2c.tfstate"
   }
 }
+
+provider "azuread" {
+}
+
 
 provider "azurerm" {
   features {

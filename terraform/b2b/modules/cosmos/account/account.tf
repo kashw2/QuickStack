@@ -4,7 +4,7 @@ resource "azurerm_cosmosdb_account" "account" {
   offer_type          = "Standard"
   resource_group_name = var.resource_group_name
 
-  kind                = "GlobalDocumentDB"
+  kind = "GlobalDocumentDB"
 
   enable_free_tier = true
 
