@@ -12,7 +12,7 @@ resource "azurerm_storage_account" "terraform" {
 }
 
 resource "azurerm_storage_container" "terraform" {
-  name                 = "terraform-state-container"
+  name                 = "terraform"
   storage_account_name = azurerm_storage_account.terraform.name
 }
 
