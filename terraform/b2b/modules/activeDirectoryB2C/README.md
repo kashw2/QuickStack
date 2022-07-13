@@ -17,6 +17,16 @@ after following the above ordering of creation, you must:
 3) Navigate to User flows
 4) Create a new user flow with the requirements of your user flow
 
+For correct operation of the client as is, you will require the following claims as part of your user flow:
+
+- Display Name
+- User's Object ID
+
+Coupled with this, you will need the following User attributes:
+
+- Display Name
+- Email Address
+
 The only requirement above is that during the creation of the user flow, we must enable a return claim for a user's
 object id. This will enable us to use cosmos for storage of extra user credentials later on as AAD B2C does not
 currently support Roles and Groups.
