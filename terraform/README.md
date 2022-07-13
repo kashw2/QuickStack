@@ -40,4 +40,4 @@ It is currently not possible to setup CICD for the b2c tenant.
 To authenticate with Azure and set the environment variables required to interact with the `azurerm` and `azuread`
 providers, run the `az login` command and follow the presented steps. After this, you should be authenticated with
 Azure. In multi tenant and subscription scenarios you will have to set the subscription you wish to work with.
-This can be done by running `az account set --subscription="YourSubscriptionName""`
+This can be done by running `az account set --subscription="YourSubscriptionName"`
