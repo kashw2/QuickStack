@@ -17,7 +17,7 @@ resource "azuread_application" "client" {
   fallback_public_client_enabled = true
 
   single_page_application {
-    redirect_uris = ["http://localhost:4200/"]
+    redirect_uris = ["http://localhost:4200/", "https://quickstack-client.azurewebsites.net/"]
   }
 
   /**
