@@ -2,34 +2,33 @@
   <h2 class="my-auto">Quick</h2>
   <h2 class="my-auto text-primary">Stack</h2>
   <div class="d-flex col flex-row justify-content-evenly align-items-center">
-    <h3 class="my-0">Heading 1</h3>
-    <h3 class="my-0">Heading 2</h3>
-    <h3 class="my-0">Heading 3</h3>
-    <h3 class="my-0">Heading 4</h3>
-    <h3 class="my-0">Heading 5</h3>
+    <h4 class="my-0">Item</h4>
+    <h4 class="my-0">Item</h4>
+    <h4 class="my-0">Item</h4>
+    <h4 class="my-0">Item</h4>
   </div>
   <div *ngIf="msalService.instance.getActiveAccount()" class="d-flex col-auto my-1">
     <div class="col-auto align-self-center">
-      <img class="rounded-circle me-2"
+      <img class="rounded-circle me-0 me-md-0 me-lg-2"
            height="30px"
            width="30px"
            src="https://media-exp1.licdn.com/dms/image/C5603AQF1GIqQ9HDBLg/profile-displayphoto-shrink_800_800/0/1608116286785?e=1661990400&v=beta&t=gCaZKriclGYUyPcJQgep-xBqybQDnpIR9C9Yh6OKGvI"
            alt="">
     </div>
-    <div class="col">
+    <div class="col d-none d-lg-block">
       <div class="row">
         <div class="col">
           <p class="my-0 ms-1 small">{{msalService.instance.getActiveAccount()?.name}}</p>
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col pe-0">
           <p class="my-0 ms-1 small">Some Role</p>
         </div>
       </div>
     </div>
   </div>
   <div *ngIf="!msalService.instance.getActiveAccount()" class="d-flex col-auto my-1">
-    <h3 class="my-0" (click)="loginPopup()">Login</h3>
+    <h4 class="my-0" (click)="loginPopup()">Login</h4>
   </div>
 </div>
