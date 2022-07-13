@@ -23,11 +23,11 @@ what some other 'QuickApps' or 'QuickStarts' may offer in comparison.
 
 ### Environment Variables
 
-| Name               | Description                                       | Usage               |
-|--------------------|---------------------------------------------------|---------------------|
-| AZ_CLIENT_ID       | Azure Client Id                                   | Infrastructure      |
-| AZ_CLIENT_SECRET   | Azure Client Secret                               | Infrastructure      |
-| AZ_SUBSCRIPTION_ID | The Id of the Subscription running Terraform over | Infrastructure      |
-| AZ_TENANT_ID       | The tenant / directory id in Azure                | Infrastructure      |
-| GH_TOKEN           | GitHub Personal Access Token                      | Infrastructure / CI |
-| INFRACOST_API_KEY  | API Key from Infracosts                           | Infrastructure / CI |
+| Name               | Description                                       | Usage                |
+|--------------------|---------------------------------------------------|----------------------|
+| AZ_CLIENT_ID       | Azure Client Id                                   | Infrastructure / CI  |
+| AZ_CLIENT_SECRET   | Azure Client Secret                               | Infrastructure / CI  |
+| AZ_SUBSCRIPTION_ID | The Id of the Subscription running Terraform over | Infrastructure / CI  |
+| AZ_TENANT_ID       | The tenant / directory id in Azure                | Infrastructure / CI  |
+| GH_TOKEN           | GitHub Personal Access Token                      | Infrastructure / CI  |
+| INFRACOST_API_KEY  | API Key from Infracosts                           | Infrastructure / CI  |
