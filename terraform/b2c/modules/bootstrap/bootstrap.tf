@@ -1,3 +1,0 @@
-module "azuread" {
-  source = "./azuread"
-}
