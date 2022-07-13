@@ -9,18 +9,16 @@ resource "azuread_application" "client" {
   support_url           = "https://localhost:4200/help"
 
   api {
+    known_client_applications      = []
+    mapped_claims_enabled          = false
     requested_access_token_version = 2
   }
 
-  web {
-    redirect_uris = ["http://localhost:4200/"]
-    implicit_grant {
-      access_token_issuance_enabled = false
-      id_token_issuance_enabled     = false
-    }
-  }
+  fallback_public_client_enabled = true
 
-  fallback_public_client_enabled = false
+  single_page_application {
+    redirect_uris = ["http://localhost:4200/"]
+  }
 
   /**
   For info regarding resource access, reference the Microsoft Graph documentation.
