@@ -25,6 +25,17 @@
         <div class="col pe-0">
           <p class="my-0 ms-1 small">Some Role</p>
         </div>
+        <div class="col-auto ps-0">
+          <div class="dropdown">
+            <i data-bs-toggle="dropdown" aria-expanded="false" id="account-dropdown" class="bi bi-chevron-down"></i>
+            <ul class="dropdown-menu">
+              <li aria-labelledby="account-dropdown">
+                <p class="dropdown-item small disabled">Account</p>
+                <p class="dropdown-item small" (click)="logout(false)">Logout</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
