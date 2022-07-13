@@ -17,6 +17,9 @@ terraform {
   }
 }
 
+provider "azuread" {
+}
+
 provider "azurerm" {
   features {
     resource_group {

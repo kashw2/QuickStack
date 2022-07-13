@@ -13,7 +13,7 @@ resource "azuread_application" "client" {
   }
 
   web {
-    redirect_uris = ["https://localhost:4200/"]
+    redirect_uris = ["http://localhost:4200/"]
     implicit_grant {
       access_token_issuance_enabled = false
       id_token_issuance_enabled     = false
