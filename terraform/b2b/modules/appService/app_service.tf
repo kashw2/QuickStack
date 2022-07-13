@@ -14,18 +14,21 @@ resource "azurerm_linux_web_app" "client" {
 
     always_on           = false
     health_check_path   = "/"
-    load_balancing_mode = "WeightedRoundRobin"
+    load_balancing_mode = "LeastRequests"
+    ftps_state          = "AllAllowed"
 
     cors {
-      allowed_origins = ["*"]
+      allowed_origins     = ["*"]
+      support_credentials = false
     }
 
   }
 
   app_settings = {
-    DOCKER_REGISTRY_SERVER_URL      = "https://ghcr.io"
-    DOCKER_REGISTRY_SERVER_USERNAME = "kashw2"
-    DOCKER_REGISTRY_SERVER_PASSWORD = var.registry_password
+    WEBSITES_ENABLE_APP_SERVICE_STORAGE = false
+    DOCKER_REGISTRY_SERVER_URL          = "https://ghcr.io"
+    DOCKER_REGISTRY_SERVER_USERNAME     = "kashw2"
+    DOCKER_REGISTRY_SERVER_PASSWORD     = var.registry_password
   }
 
   logs {
