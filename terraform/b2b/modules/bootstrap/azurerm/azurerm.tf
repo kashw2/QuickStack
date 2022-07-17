@@ -9,6 +9,7 @@ resource "azurerm_storage_account" "terraform" {
   location                 = azurerm_resource_group.terraform.location
   name                     = "quickstack"
   resource_group_name      = azurerm_resource_group.terraform.name
+  min_tls_version = "TLS1_2"
   queue_properties {
     logging {
       delete  = true
