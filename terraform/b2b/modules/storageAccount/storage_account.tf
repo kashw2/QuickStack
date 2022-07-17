@@ -4,4 +4,12 @@ resource "azurerm_storage_account" "backend" {
   location                 = var.location
   name                     = "backendfn"
   resource_group_name      = var.consumption_resource_group_name
+  queue_properties {
+    logging {
+      delete  = true
+      read    = true
+      version = "1.0"
+      write   = true
+    }
+  }
 }
