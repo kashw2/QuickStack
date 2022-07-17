@@ -4,6 +4,7 @@ resource "azurerm_storage_account" "backend" {
   location                 = var.location
   name                     = "backendfn"
   resource_group_name      = var.consumption_resource_group_name
+  min_tls_version = "TLS1_2"
   queue_properties {
     logging {
       delete  = true
