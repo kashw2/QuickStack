@@ -29,5 +29,4 @@ what some other 'QuickApps' or 'QuickStarts' may offer in comparison.
 | AZ_CLIENT_SECRET   | Azure Client Secret                               | Infrastructure / CI  |
 | AZ_SUBSCRIPTION_ID | The Id of the Subscription running Terraform over | Infrastructure / CI  |
 | AZ_TENANT_ID       | The tenant / directory id in Azure                | Infrastructure / CI  |
-| GH_TOKEN           | GitHub Personal Access Token                      | Infrastructure / CI  |
 | INFRACOST_API_KEY  | API Key from Infracosts                           | Infrastructure / CI  |
