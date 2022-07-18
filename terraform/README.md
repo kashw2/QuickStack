@@ -29,7 +29,6 @@ It is currently not possible to setup CICD for the b2c tenant.
 | AZ_CLIENT_SECRET   | Azure Client Secret                               |
 | AZ_SUBSCRIPTION_ID | The Id of the Subscription running Terraform over |
 | AZ_TENANT_ID       | The tenant / directory id in Azure                |
-| GH_TOKEN           | GitHub Personal Access Token                      |
 
 ## Authentication
 
