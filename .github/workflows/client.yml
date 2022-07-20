@@ -79,7 +79,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GH_TOKEN }}
+          password: ${{ github.token }}
       - run: |
           docker build -t ghcr.io/kashw2/client:${{ github.sha }} -t ghcr.io/kashw2/client:latest -f Dockerfile .
           docker push ghcr.io/kashw2/client:${{ github.sha }}
